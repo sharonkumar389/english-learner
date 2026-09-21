@@ -1,1 +1,1955 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>English Learner</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e5e5e5;
+    color: #222;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    background: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #666;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav button {
+    border: none;
+    background: #eeeeee;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #222;
+    color: white;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #eeeeee, white);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #555;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.main-btn {
+    padding: 14px 23px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    background: #222;
+    color: white;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background: #555;
+    transform: translateY(-3px);
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 70px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+    font-size: 17px;
+}
+
+/* ================= CARDS ================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.topic-btn {
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ================= TOPIC BOX ================= */
+
+.topic-box {
+    background: white;
+    padding: 35px;
+    margin-top: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.topic-box h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.topic-box p {
+    line-height: 1.8;
+    color: #444;
+}
+
+.example {
+    background: #eeeeee;
+    padding: 18px;
+    border-left: 5px solid #222;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+/* ================= TABLE ================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+th, td {
+    padding: 14px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background: #222;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f1f1f1;
+}
+
+/* ================================================= */
+/* ================= ENGLISH TEST ================== */
+/* ================================================= */
+
+#test {
+    background: #d8d8d8;
+}
+
+.test-container {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.13);
+}
+
+/* TEST TOP BAR */
+
+.test-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.question-number {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.timer {
+    background: #222;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* PROGRESS BAR */
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #222;
+    transition: width 0.3s;
+}
+
+/* QUESTION */
+
+.question-area h2 {
+    font-size: 25px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.option {
+    display: block;
+    background: #eeeeee;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 9px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.option:hover {
+    background: #d2d2d2;
+}
+
+.option.selected {
+    border-color: #222;
+    background: #d0d0d0;
+}
+
+.option input {
+    display: none;
+}
+
+/* NAVIGATION */
+
+.test-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.test-btn {
+    padding: 13px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.test-btn:hover {
+    background: #555;
+}
+
+.test-btn:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+.submit-test {
+    background: #333;
+}
+
+/* ================= TEST INTRO ================= */
+
+#testIntro {
+    text-align: center;
+}
+
+#testIntro h2 {
+    margin-bottom: 15px;
+}
+
+#testIntro p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.start-btn {
+    padding: 15px 35px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* ================================================= */
+/* ================= DASHBOARD ===================== */
+/* ================================================= */
+
+#dashboard {
+    background: #eeeeee;
+}
+
+.dashboard {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.score-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+}
+
+.score-card h3 {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.number {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* LEVEL */
+
+.level-box {
+    max-width: 800px;
+    margin: 35px auto 0;
+    background: #222;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.level-box h2 {
+    margin-bottom: 10px;
+}
+
+.level-box p {
+    line-height: 1.7;
+}
+
+/* LEVEL SCALE */
+
+.level-scale {
+    max-width: 900px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.level-item {
+    background: white;
+    padding: 15px 5px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.level-item.active {
+    background: #222;
+    color: white;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+
+    .test-container {
+        padding: 22px;
+    }
+
+    .question-area h2 {
+        font-size: 21px;
+    }
+
+    .level-scale {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 9px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================================================= -->
+<!-- ================= HEADER ========================= -->
+<!-- ================================================= -->
+
+<header>
+
+    <div class="logo">
+        English <span>Learner</span>
+    </div>
+
+    <nav>
+
+        <button onclick="location.href='#voices'">
+            Voices
+        </button>
+
+        <button onclick="location.href='#speeches'">
+            Speeches
+        </button>
+
+        <button onclick="location.href='#parts'">
+            Parts of Speech
+        </button>
+
+        <button onclick="location.href='#tenses'">
+            Tenses
+        </button>
+
+        <button onclick="location.href='#test'">
+            Test Your English
+        </button>
+
+    </nav>
+
+</header>
+
+
+<!-- ================================================= -->
+<!-- ================= HERO ========================== -->
+<!-- ================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            English <span>Learner</span>
+        </h1>
+
+        <p>
+            Learn grammar, practice English and test your
+            skills with an interactive English learning platform.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="main-btn"
+                    onclick="location.href='#voices'">
+                Voices
+            </button>
+
+            <button class="main-btn"
+                    onclick="location.href='#speeches'">
+                Speeches
+            </button>
+
+            <button class="main-btn"
+                    onclick="location.href='#tenses'">
+                Tenses
+            </button>
+
+            <button class="main-btn"
+                    onclick="location.href='#test'">
+                Test Your English
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- ================= GRAMMAR TOPICS ================ -->
+<!-- ================================================= -->
+
+<section>
+
+    <div class="section-title">
+
+        <h2>Grammar Topics</h2>
+
+        <p>
+            Build your English grammar step by step.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Voices</h3>
+
+            <p>
+                Learn Active Voice and Passive Voice with
+                examples and sentence structures.
+            </p>
+
+            <button class="topic-btn"
+                    onclick="location.href='#voices'">
+                Learn Voices
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Speeches</h3>
+
+            <p>
+                Learn Direct Speech and Indirect Speech
+                with useful examples.
+            </p>
+
+            <button class="topic-btn"
+                    onclick="location.href='#speeches'">
+                Learn Speeches
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Parts of Speech</h3>
+
+            <p>
+                Learn nouns, pronouns, verbs, adjectives,
+                adverbs and other parts of speech.
+            </p>
+
+            <button class="topic-btn"
+                    onclick="location.href='#parts'">
+                Learn Parts
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Tenses</h3>
+
+            <p>
+                Learn all 12 English tenses with structures
+                and examples.
+            </p>
+
+            <button class="topic-btn"
+                    onclick="location.href='#tenses'">
+                Learn Tenses
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- ================= VOICES ========================= -->
+<!-- ================================================= -->
+
+<section id="voices">
+
+    <div class="section-title">
+
+        <h2>Voices</h2>
+
+        <p>Active Voice and Passive Voice</p>
+
+    </div>
+
+
+    <div class="topic-box">
+
+        <h3>Active Voice</h3>
+
+        <p>
+            In Active Voice, the subject performs the action.
+        </p>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            Ravi writes a letter.
+        </div>
+
+    </div>
+
+
+    <div class="topic-box">
+
+        <h3>Passive Voice</h3>
+
+        <p>
+            In Passive Voice, the subject receives the action.
+        </p>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            A letter is written by Ravi.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- ================= SPEECHES ======================= -->
+<!-- ================================================= -->
+
+<section id="speeches">
+
+    <div class="section-title">
+
+        <h2>Speeches</h2>
+
+        <p>Direct Speech and Indirect Speech</p>
+
+    </div>
+
+
+    <div class="topic-box">
+
+        <h3>Direct Speech</h3>
+
+        <p>
+            Direct Speech reports the exact words spoken by someone.
+        </p>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            Ravi said, "I am tired."
+        </div>
+
+    </div>
+
+
+    <div class="topic-box">
+
+        <h3>Indirect Speech</h3>
+
+        <p>
+            Indirect Speech reports what someone said without
+            using the exact words.
+        </p>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            Ravi said that he was tired.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- ================= PARTS OF SPEECH =============== -->
+<!-- ================================================= -->
+
+<section id="parts">
+
+    <div class="section-title">
+
+        <h2>Parts of Speech</h2>
+
+        <p>The eight major parts of speech</p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Noun</h3>
+            <p>A word that names a person, place, thing or idea.</p>
+        </div>
+
+        <div class="card">
+            <h3>Pronoun</h3>
+            <p>A word used instead of a noun.</p>
+        </div>
+
+        <div class="card">
+            <h3>Verb</h3>
+            <p>A word that expresses an action or state.</p>
+        </div>
+
+        <div class="card">
+            <h3>Adjective</h3>
+            <p>A word that describes a noun or pronoun.</p>
+        </div>
+
+        <div class="card">
+            <h3>Adverb</h3>
+            <p>A word that modifies a verb, adjective or adverb.</p>
+        </div>
+
+        <div class="card">
+            <h3>Preposition</h3>
+            <p>A word that shows a relationship between words.</p>
+        </div>
+
+        <div class="card">
+            <h3>Conjunction</h3>
+            <p>A word that connects words or sentences.</p>
+        </div>
+
+        <div class="card">
+            <h3>Interjection</h3>
+            <p>A word expressing sudden emotion.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- ================= TENSES ========================= -->
+<!-- ================================================= -->
+
+<section id="tenses">
+
+    <div class="section-title">
+
+        <h2>12 Tenses</h2>
+
+        <p>Learn the structures of English tenses.</p>
+
+    </div>
+
+
+    <div class="topic-box">
+
+        <table>
+
+            <tr>
+                <th>Tense</th>
+                <th>Structure</th>
+                <th>Example</th>
+            </tr>
+
+            <tr>
+                <td>Simple Present</td>
+                <td>Subject + V1</td>
+                <td>I play cricket.</td>
+            </tr>
+
+            <tr>
+                <td>Present Continuous</td>
+                <td>Subject + am/is/are + V-ing</td>
+                <td>I am playing cricket.</td>
+            </tr>
+
+            <tr>
+                <td>Present Perfect</td>
+                <td>Subject + has/have + V3</td>
+                <td>I have played cricket.</td>
+            </tr>
+
+            <tr>
+                <td>Present Perfect Continuous</td>
+                <td>Subject + has/have been + V-ing</td>
+                <td>I have been playing cricket.</td>
+            </tr>
+
+            <tr>
+                <td>Simple Past</td>
+                <td>Subject + V2</td>
+                <td>I played cricket.</td>
+            </tr>
+
+            <tr>
+                <td>Past Continuous</td>
+                <td>Subject + was/were + V-ing</td>
+                <td>I was playing cricket.</td>
+            </tr>
+
+            <tr>
+                <td>Past Perfect</td>
+                <td>Subject + had + V3</td>
+                <td>I had played cricket.</td>
+            </tr>
+
+            <tr>
+                <td>Past Perfect Continuous</td>
+                <td>Subject + had been + V-ing</td>
+                <td>I had been playing cricket.</td>
+            </tr>
+
+            <tr>
+                <td>Simple Future</td>
+                <td>Subject + will + V1</td>
+                <td>I will play cricket.</td>
+            </tr>
+
+            <tr>
+                <td>Future Continuous</td>
+                <td>Subject + will be + V-ing</td>
+                <td>I will be playing cricket.</td>
+            </tr>
+
+            <tr>
+                <td>Future Perfect</td>
+                <td>Subject + will have + V3</td>
+                <td>I will have played cricket.</td>
+            </tr>
+
+            <tr>
+                <td>Future Perfect Continuous</td>
+                <td>Subject + will have been + V-ing</td>
+                <td>I will have been playing cricket.</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- ================= ENGLISH TEST ================== -->
+<!-- ================================================= -->
+
+<section id="test">
+
+    <div class="section-title">
+
+        <h2>Test Your English</h2>
+
+        <p>
+            20 randomly selected questions from a 30-question bank.
+        </p>
+
+    </div>
+
+
+    <div class="test-container">
+
+
+        <!-- TEST INTRO -->
+
+        <div id="testIntro">
+
+            <h2>English Grammar Test</h2>
+
+            <p>
+                You will get 20 questions randomly selected
+                from a bank of 30 questions.
+                You have 10 minutes to complete the test.
+            </p>
+
+            <p>
+                Topics include Tenses, Voices, Speeches,
+                Parts of Speech and Grammar.
+            </p>
+
+            <button class="start-btn" onclick="startTest()">
+                Start Test
+            </button>
+
+        </div>
+
+
+        <!-- ACTUAL TEST -->
+
+        <div id="testArea" style="display:none;">
+
+            <div class="test-top">
+
+                <div class="question-number" id="questionNumber">
+                    Question 1 of 20
+                </div>
+
+                <div class="timer" id="timer">
+                    10:00
+                </div>
+
+            </div>
+
+
+            <div class="progress-container">
+
+                <div class="progress-bar" id="progressBar"></div>
+
+            </div>
+
+
+            <div class="question-area">
+
+                <h2 id="questionText"></h2>
+
+                <div id="optionsContainer"></div>
+
+            </div>
+
+
+            <div class="test-navigation">
+
+                <button
+                    class="test-btn"
+                    id="previousBtn"
+                    onclick="previousQuestion()">
+                    ← Previous
+                </button>
+
+
+                <button
+                    class="test-btn"
+                    id="nextBtn"
+                    onclick="nextQuestion()">
+                    Next →
+                </button>
+
+
+                <button
+                    class="test-btn submit-test"
+                    id="submitBtn"
+                    onclick="finishTest()"
+                    style="display:none;">
+                    Submit Test
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- ================= DASHBOARD ====================== -->
+<!-- ================================================= -->
+
+<section id="dashboard">
+
+    <div class="section-title">
+
+        <h2>English Rating Dashboard</h2>
+
+        <p>
+            Your performance will appear here after the test.
+        </p>
+
+    </div>
+
+
+    <div class="dashboard">
+
+
+        <div class="score-card">
+
+            <h3>Score</h3>
+
+            <div class="number" id="score">
+                --
+            </div>
+
+        </div>
+
+
+        <div class="score-card">
+
+            <h3>Percentage</h3>
+
+            <div class="number" id="percentage">
+                --
+            </div>
+
+        </div>
+
+
+        <div class="score-card">
+
+            <h3>Rating</h3>
+
+            <div class="number" id="rating">
+                --
+            </div>
+
+        </div>
+
+
+        <div class="score-card">
+
+            <h3>Time</h3>
+
+            <div class="number" id="timeTaken">
+                --
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="level-box">
+
+        <h2 id="level">
+            Complete the test to discover your level.
+        </h2>
+
+        <p id="levelDescription">
+            Your English level will be calculated based
+            on your test percentage.
+        </p>
+
+    </div>
+
+
+    <!-- LEVEL SCALE -->
+
+    <div class="level-scale">
+
+        <div class="level-item" id="beginner">
+            Beginner<br>
+            0–39%
+        </div>
+
+        <div class="level-item" id="elementary">
+            Elementary<br>
+            40–54%
+        </div>
+
+        <div class="level-item" id="intermediate">
+            Intermediate<br>
+            55–69%
+        </div>
+
+        <div class="level-item" id="upperIntermediate">
+            Upper-Intermediate<br>
+            70–84%
+        </div>
+
+        <div class="level-item" id="advanced">
+            Advanced<br>
+            85–100%
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- ================= FOOTER ========================= -->
+<!-- ================================================= -->
+
+<footer>
+
+    <p>
+        © 2026 English Learner | Learn • Practice • Improve
+    </p>
+
+</footer>
+
+
+<!-- ================================================= -->
+<!-- ================= JAVASCRIPT ===================== -->
+<!-- ================================================= -->
+
+<script>
+
+/* ================================================= */
+/* QUESTION BANK — 30 QUESTIONS                     */
+/* ================================================= */
+
+const questionBank = [
+
+    {
+        question: "Choose the correct sentence.",
+        options: [
+            "She go to college every day.",
+            "She goes to college every day.",
+            "She going to college every day.",
+            "She gone to college every day."
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Identify the tense: 'I have finished my work.'",
+        options: [
+            "Simple Present",
+            "Present Perfect",
+            "Simple Past",
+            "Past Perfect"
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Change into Passive Voice: 'Ravi writes a letter.'",
+        options: [
+            "A letter is written by Ravi.",
+            "A letter was written by Ravi.",
+            "A letter has written by Ravi.",
+            "A letter is writing by Ravi."
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Identify the noun: 'The boy is reading a book.'",
+        options: [
+            "Reading",
+            "Is",
+            "Boy",
+            "The"
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Change into Indirect Speech: Ravi said, 'I am tired.'",
+        options: [
+            "Ravi said that I am tired.",
+            "Ravi said that he was tired.",
+            "Ravi says that he tired.",
+            "Ravi said he is tired."
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Which word is an adjective?",
+        options: [
+            "Quickly",
+            "Beautiful",
+            "Run",
+            "Happily"
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Which sentence is in Simple Past?",
+        options: [
+            "I play cricket.",
+            "I am playing cricket.",
+            "I played cricket.",
+            "I have played cricket."
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Choose the correct article: 'He is ___ honest man.'",
+        options: [
+            "a",
+            "an",
+            "the",
+            "no article"
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Which word is a pronoun?",
+        options: [
+            "Table",
+            "Beautiful",
+            "They",
+            "Quickly"
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Identify the preposition: 'The book is on the table.'",
+        options: [
+            "Book",
+            "Is",
+            "On",
+            "Table"
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Which sentence is in Present Continuous?",
+        options: [
+            "I eat breakfast.",
+            "I ate breakfast.",
+            "I am eating breakfast.",
+            "I have eaten breakfast."
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Choose the correct form: 'She ___ already finished her homework.'",
+        options: [
+            "have",
+            "has",
+            "having",
+            "had been"
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Which word is a conjunction?",
+        options: [
+            "And",
+            "Quickly",
+            "Beautiful",
+            "School"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Choose the correct sentence.",
+        options: [
+            "They was playing.",
+            "They were playing.",
+            "They is playing.",
+            "They be playing."
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Which tense is used in: 'I will call you tomorrow'?",
+        options: [
+            "Simple Present",
+            "Simple Past",
+            "Simple Future",
+            "Present Perfect"
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Identify the adverb: 'He runs quickly.'",
+        options: [
+            "He",
+            "Runs",
+            "Quickly",
+            "None"
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Change into Passive Voice: 'They built a house.'",
+        options: [
+            "A house is built by them.",
+            "A house was built by them.",
+            "A house has built by them.",
+            "A house will be built by them."
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Choose the correct indirect speech: She said, 'I can swim.'",
+        options: [
+            "She said that she could swim.",
+            "She said that I can swim.",
+            "She says she can swimming.",
+            "She said she swim."
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Which word is an interjection?",
+        options: [
+            "Wow!",
+            "Table",
+            "Run",
+            "Because"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Choose the correct sentence.",
+        options: [
+            "He don't like coffee.",
+            "He doesn't likes coffee.",
+            "He doesn't like coffee.",
+            "He not like coffee."
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Identify the tense: 'They had left before I arrived.'",
+        options: [
+            "Past Perfect",
+            "Simple Past",
+            "Present Perfect",
+            "Past Continuous"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Which sentence is Passive Voice?",
+        options: [
+            "Ravi opened the door.",
+            "Ravi is opening the door.",
+            "The door was opened by Ravi.",
+            "Ravi opens the door."
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Choose the correct preposition: 'She is good ___ English.'",
+        options: [
+            "in",
+            "at",
+            "on",
+            "by"
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Which sentence is grammatically correct?",
+        options: [
+            "I have been studying for two hours.",
+            "I am study for two hours.",
+            "I has been study for two hours.",
+            "I studying since two hours."
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Choose the correct form: 'If I had money, I ___ a car.'",
+        options: [
+            "buy",
+            "will buy",
+            "would buy",
+            "bought"
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Which word is a verb?",
+        options: [
+            "Happiness",
+            "Beautiful",
+            "Run",
+            "Quickly"
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Change into Passive Voice: 'The teacher teaches English.'",
+        options: [
+            "English was taught by the teacher.",
+            "English is taught by the teacher.",
+            "English has taught by the teacher.",
+            "English is teaching by the teacher."
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Choose the correct sentence.",
+        options: [
+            "Neither of the answers are correct.",
+            "Neither of the answers is correct.",
+            "Neither answers is correct.",
+            "Neither answer are correct."
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Identify the tense: 'She will have completed the project by Monday.'",
+        options: [
+            "Future Continuous",
+            "Future Perfect",
+            "Simple Future",
+            "Present Perfect"
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Choose the correct indirect speech: He said, 'I went to school.'",
+        options: [
+            "He said that he had gone to school.",
+            "He said that I went to school.",
+            "He says that he went school.",
+            "He said that he goes to school."
+        ],
+        answer: 0
+    }
+
+];
+
+
+/* ================================================= */
+/* TEST VARIABLES                                    */
+/* ================================================= */
+
+let questions = [];
+let currentQuestion = 0;
+let userAnswers = [];
+let timerInterval;
+let totalSeconds = 600;
+let testStarted = false;
+
+
+/* ================================================= */
+/* RANDOM QUESTION SELECTION                         */
+/* ================================================= */
+
+function shuffle(array) {
+
+    let shuffled = [...array];
+
+    for (let i = shuffled.length - 1; i > 0; i--) {
+
+        let j = Math.floor(Math.random() * (i + 1));
+
+        [shuffled[i], shuffled[j]] =
+        [shuffled[j], shuffled[i]];
+
+    }
+
+    return shuffled;
+}
+
+
+/* ================================================= */
+/* START TEST                                       */
+/* ================================================= */
+
+function startTest() {
+
+    questions = shuffle(questionBank).slice(0, 20);
+
+    userAnswers = new Array(20).fill(null);
+
+    currentQuestion = 0;
+
+    totalSeconds = 600;
+
+    testStarted = true;
+
+    document.getElementById("testIntro").style.display = "none";
+
+    document.getElementById("testArea").style.display = "block";
+
+    showQuestion();
+
+    startTimer();
+
+}
+
+
+/* ================================================= */
+/* SHOW QUESTION                                    */
+/* ================================================= */
+
+function showQuestion() {
+
+    let question = questions[currentQuestion];
+
+    document.getElementById("questionNumber").innerText =
+        "Question " + (currentQuestion + 1) + " of 20";
+
+    document.getElementById("questionText").innerText =
+        question.question;
+
+    let optionsContainer =
+        document.getElementById("optionsContainer");
+
+    optionsContainer.innerHTML = "";
+
+
+    question.options.forEach(function(option, index) {
+
+        let label = document.createElement("label");
+
+        label.className = "option";
+
+        if (userAnswers[currentQuestion] === index) {
+            label.classList.add("selected");
+        }
+
+        label.innerHTML =
+            '<input type="radio" name="answer" value="' +
+            index + '">' +
+            option;
+
+        label.onclick = function() {
+
+            userAnswers[currentQuestion] = index;
+
+            document.querySelectorAll(".option")
+                .forEach(function(item) {
+                    item.classList.remove("selected");
+                });
+
+            label.classList.add("selected");
+
+        };
+
+        optionsContainer.appendChild(label);
+
+    });
+
+
+    /* Progress */
+
+    let progress =
+        ((currentQuestion + 1) / 20) * 100;
+
+    document.getElementById("progressBar")
+        .style.width = progress + "%";
+
+
+    /* Previous button */
+
+    document.getElementById("previousBtn").disabled =
+        currentQuestion === 0;
+
+
+    /* Last question */
+
+    if (currentQuestion === 19) {
+
+        document.getElementById("nextBtn")
+            .style.display = "none";
+
+        document.getElementById("submitBtn")
+            .style.display = "block";
+
+    } else {
+
+        document.getElementById("nextBtn")
+            .style.display = "block";
+
+        document.getElementById("submitBtn")
+            .style.display = "none";
+
+    }
+
+}
+
+
+/* ================================================= */
+/* NEXT QUESTION                                    */
+/* ================================================= */
+
+function nextQuestion() {
+
+    if (currentQuestion < 19) {
+
+        currentQuestion++;
+
+        showQuestion();
+
+    }
+
+}
+
+
+/* ================================================= */
+/* PREVIOUS QUESTION                                */
+/* ================================================= */
+
+function previousQuestion() {
+
+    if (currentQuestion > 0) {
+
+        currentQuestion--;
+
+        showQuestion();
+
+    }
+
+}
+
+
+/* ================================================= */
+/* TIMER                                             */
+/* ================================================= */
+
+function startTimer() {
+
+    clearInterval(timerInterval);
+
+    timerInterval = setInterval(function() {
+
+        let minutes =
+            Math.floor(totalSeconds / 60);
+
+        let seconds =
+            totalSeconds % 60;
+
+
+        let formattedSeconds =
+            seconds < 10 ? "0" + seconds : seconds;
+
+
+        document.getElementById("timer").innerText =
+            minutes + ":" + formattedSeconds;
+
+
+        if (totalSeconds <= 0) {
+
+            clearInterval(timerInterval);
+
+            finishTest(true);
+
+            return;
+
+        }
+
+
+        totalSeconds--;
+
+    }, 1000);
+
+}
+
+
+/* ================================================= */
+/* FINISH TEST                                      */
+/* ================================================= */
+
+function finishTest(timeUp = false) {
+
+    clearInterval(timerInterval);
+
+    testStarted = false;
+
+
+    let score = 0;
+
+
+    questions.forEach(function(question, index) {
+
+        if (userAnswers[index] === question.answer) {
+
+            score++;
+
+        }
+
+    });
+
+
+    let percentage =
+        Math.round((score / 20) * 100);
+
+
+    let level = "";
+
+    let description = "";
+
+
+    /* LEVEL SYSTEM */
+
+    if (percentage < 40) {
+
+        level = "Beginner";
+
+        description =
+            "You are building your basic English foundation. Focus on basic grammar, vocabulary and sentence construction.";
+
+    }
+
+    else if (percentage < 55) {
+
+        level = "Elementary";
+
+        description =
+            "You understand many basic English concepts. Continue practicing grammar and everyday communication.";
+
+    }
+
+    else if (percentage < 70) {
+
+        level = "Intermediate";
+
+        description =
+            "You have a developing command of English grammar. Regular speaking and writing practice can strengthen your skills.";
+
+    }
+
+    else if (percentage < 85) {
+
+        level = "Upper-Intermediate";
+
+        description =
+            "You have a strong working knowledge of English. Focus on accuracy, natural expressions and advanced grammar.";
+
+    }
+
+    else {
+
+        level = "Advanced";
+
+        description =
+            "You demonstrated a high level of grammar knowledge in this test. Continue practicing for greater fluency and precision.";
+
+    }
+
+
+    /* UPDATE DASHBOARD */
+
+    document.getElementById("score").innerText =
+        score + " / 20";
+
+    document.getElementById("percentage").innerText =
+        percentage + "%";
+
+    document.getElementById("rating").innerText =
+        level;
+
+
+    let usedTime =
+        600 - totalSeconds;
+
+    let usedMinutes =
+        Math.floor(usedTime / 60);
+
+    let usedSeconds =
+        usedTime % 60;
+
+    document.getElementById("timeTaken").innerText =
+        usedMinutes + "m " + usedSeconds + "s";
+
+
+    document.getElementById("level").innerText =
+        "Your English Level: " + level;
+
+    document.getElementById("levelDescription").innerText =
+        description;
+
+
+    /* Highlight level */
+
+    document.querySelectorAll(".level-item")
+        .forEach(function(item) {
+
+            item.classList.remove("active");
+
+        });
+
+
+    if (level === "Beginner") {
+
+        document.getElementById("beginner")
+            .classList.add("active");
+
+    }
+
+    else if (level === "Elementary") {
+
+        document.getElementById("elementary")
+            .classList.add("active");
+
+    }
+
+    else if (level === "Intermediate") {
+
+        document.getElementById("intermediate")
+            .classList.add("active");
+
+    }
+
+    else if (level === "Upper-Intermediate") {
+
+        document.getElementById("upperIntermediate")
+            .classList.add("active");
+
+    }
+
+    else {
+
+        document.getElementById("advanced")
+            .classList.add("active");
+
+    }
+
+
+    if (timeUp) {
+
+        alert("Time is up! Your test has been submitted.");
+
+    }
+
+
+    document.getElementById("dashboard")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+</script>
+
+</body>
+</html>
+```
+
